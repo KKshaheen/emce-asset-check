@@ -1,12 +1,10 @@
-# EMCE Asset Check System
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
 
-Daily vehicle and machinery inspection system for EMCE Construction.
-
-Built with React + Vite + Supabase, deployed on Vercel.
-
-## How to make changes
-
-Edit `src/App.jsx` for any application logic or UI changes.
-Edit `index.html` for global styles.
-
-Vercel auto-deploys on every commit to `main`.
+export default defineConfig({
+    plugins: [react()],
+    server: {
+          port: 5173,
+          open: true
+    }
+})
